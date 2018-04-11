@@ -1,0 +1,14 @@
+prefix=/Users/brado/brado/Work/Development/FFmpeg/output/MacOSX/x86_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 5.1.102
+Requires: libswscale >= 3.1.100, libavresample >= 2.1.0, libavformat >= 56.4.103, libavcodec >= 56.1.101, libswresample >= 1.1.100, libavutil >= 54.7.101
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -framework QTKit -framework Foundation -framework QuartzCore -framework CoreVideo -framework Foundation -framework AVFoundation -framework CoreMedia -framework CoreFoundation -framework VideoDecodeAcceleration -framework QuartzCore -liconv -lssl -lcrypto -lmp3lame -lm -lbz2 -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}
